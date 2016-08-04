@@ -117,7 +117,7 @@ User.prototype.revokeWritePermission = function (resourceId) {
   }
 };
 
-User.prototype.revokePermission = function (resourceId) {
+User.prototype.revokePermissions = function (resourceId) {
   delete this.resources[resourceId];
 };
 

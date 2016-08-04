@@ -70,11 +70,11 @@ myUser4.revokeWritePermission(resource2.getId());
 var test10 = myUser4.canWrite(resource2.getId()) === false;
 if (!test10) console.log((++errorCount).toString() + '.', 'Failed test ', 10);
 
-// revokePermission
+// revokePermissions
 var myUser5 = new acl.User();
 myUser5.canWrite(resource1.getId());
 myUser5.canRead(resource1.getId());
-myUser5.revokePermission(resource1.getId());
+myUser5.revokePermissions(resource1.getId());
 
 var test11 = (myUser5.canWrite(resource1.getId()) ||
               myUser5.canRead(resource1.getId()) === false);
